@@ -7,7 +7,13 @@
 * # MainCtrl
 * Controller of the fcLiveApp
 */
+(function(){
+
 angular.module('fcLiveApp')
-	.controller('MainCtrl', function () {
-		this.name = "Charlies";
+	.controller('CategoryCtrl', function ($rootScope) {
+		var self = this;
+
 	});
+
+
+})();
