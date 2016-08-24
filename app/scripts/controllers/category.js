@@ -13,7 +13,11 @@ angular.module('fcLiveApp')
 	.controller('CategoryCtrl', function ($rootScope) {
 		var self = this;
 
+		setTimeout(function(){
+			$rootScope.$broadcast('categorySelected', 'Chart Titles and Axis Names');
+		}, 0);
+
+
+
 	});
-
-
 })();

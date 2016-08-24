@@ -54,35 +54,69 @@ angular
 		};
 	})
 	.run(function($rootScope){
-
-		$rootScope.data = {
-		     "properties": {
-		         "catagory": "Header",
-		         "target": "dataSource.chart",
-		         "values": [{
-		             "name": "caption",
-		             "displayName": "Caption",
-		             "type": "text",
-		             "defaultValue": "",
-		             "fontSize": "15",
-		             "bold": "0"
-
-		         }, {
-		             "name": "subcaption",
-		             "displayName": "Subcaption",
-		             "type": "text",
-		             "defaultValue": "",
-		             "fontSize": "15",
-		             "bold": "0"
-		         }]
-		     },
+		$rootScope.data =  {
+		     "properties": [{
+		              "category": "Chart Titles and Axis Names",
+		              "target": "dataSource.chart",
+		              "values": [{
+		                  "name": "caption",
+		                  "displayName": "Caption",
+		                  "type": "text",
+		                  "defaultValue": ""
+		              }, {
+		                  "name": "subcaption",
+		                  "displayName": "Subcaption",
+		                  "type": "text",
+		                  "defaultValue": ""
+		              }]
+		          },{
+		          	"category":"Functional Attributes",
+		          	"target":"dataSource.chart",
+		          	"values":[{
+		          		"name": "animation",
+						"displayName": "Animation",
+						"type": "boolean",
+						"defaultValue": "1"
+		          	},{
+		          		"name": "animationDuration",
+						"displayName": "Animation Duration",
+						"type": "number",
+						"defaultValue": "0.5"
+		          	},{
+		          		"name": "paletteColors",
+						"displayName": "Palette Colors",
+						"type": "color",
+						"defaultValue": "#0075c2"
+		          	}]
+		          },{
+		          	"category":"Tool-tip",
+		          	"target":"dataSource.chart",
+		          	"values":[{
+		          		"name": "showToolTip",
+						"displayName": "Tool-tip",
+						"type": "boolean",
+						"defaultValue": "1"
+		          	},{
+		          		"name": "toolTipBgColor",
+						"displayName": "Tool-tip background Color",
+						"type": "color",
+						"defaultValue": "#ffffff"
+		          	},{
+		          		"name": "tooltipBorderAlpha",
+						"displayName": "Tool-tip Border Transparency",
+						"type": "numberRange",
+						"min":"0",
+						"max":"100",
+						"defaultValue": "50"
+		          	}]
+		          }],
 		     "raw": {
-		         type: 'column2d',
-		         renderAt: 'chart-container',
-		         width: '550',
-		         height: '350',
-		         dataFormat: 'json',
-		         dataSource: {
+		         "type": "column2d",
+		         "renderAt": "chart-container",
+		         "width": "550",
+		         "height": "350",
+		         "dataFormat": "json",
+		         "dataSource": {
 		             "chart": {
 		                 "caption": "Monthly revenue for last year",
 		                 "subCaption": "Harry's SuperMart",
@@ -155,6 +189,9 @@ angular
 		         }
 		     }
 		 };
+		 // to be removed later
+		 testOb.data = $rootScope.data;
 
 	});
-
+// For testing purpose; To be removed later
+var testOb = {};

@@ -10,8 +10,12 @@
 (function(){
 
 angular.module('fcLiveApp')
-	.controller('PropertyCtrl', function () {
+	.controller('PropertyCtrl', function ($scope, $rootScope) {
+
+		$scope.$on('categorySelected', function(event, msg){
+			console.log(msg);
+		});	
+
+
 	});
-
-
 })();
