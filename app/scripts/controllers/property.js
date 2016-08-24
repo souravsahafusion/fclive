@@ -10,24 +10,50 @@
 (function() {
 
 	angular.module('fcLiveApp').controller('PropertyCtrl', function($scope, $rootScope) {
+		var self = this,
+			categoryList = $rootScope.data.properties,
+			raw = $rootScope.data.raw;
 
-		var self = this;
+		self.propertyList = [];
+		self.baseTarget = {};
+
+		function getBaseTarget(base, target){
+			var i = 0,
+				len = 0,
+				item = "",
+				targetAr = target.split(".");
+			len = targetAr.length;
+
+			while(i < len){
+				item = targetAr[i];
+				if(!base[item]){
+					base[item] = {};
+				}
+				base = base[item];
+				++i;
+			}
+			return base;
+		}
+
 		$scope.$on('categorySelected', function(event, msg) {
-			console.log($rootScope.data.properties);
-			$scope.categoryList = $rootScope.data.properties;
-			$scope.categoryName = msg;
-			$scope.categoryTarget = "";
-			for (var i = 0, categoryListLength = $scope.categoryList.length; i < categoryListLength; i++) {
-			if ($scope.categoryList[i].category == $scope.categoryName) {
-			$scope.categoryTarget = $scope.categoryList[i].target;
-			$scope.propertyList = $scope.categoryList[i].values;
-			console.log($scope.propertyList);
-			for (var j = 0, propertyListLength = $scope.propertyList.length; j < propertyListLength; j++) {
+			var i = 0,
+				len = categoryList.length,
+				ob;
+			self.currentCategory = msg;
 
-			}
-			}
+			for(i = 0; i < len; ++i){
+				ob = categoryList[i];
+				if(ob.category === self.currentCategory){
+					self.baseTarget = getBaseTarget(raw, ob.target);
+					self.propertyList = ob.values;
+					break;
+				}
 			}
 		});
+
+		self.onChangeData = function(){
+			$rootScope.$broadcast('propertyChanged');
+		};
 
 	});
 
