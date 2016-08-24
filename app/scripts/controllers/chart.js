@@ -22,7 +22,5 @@ angular.module('fcLiveApp')
 		$scope.$on('propertyChanged', function(){
 			revenueChart.setJSONData(raw.dataSource);
 		});	
-
-
 	});
 })();
