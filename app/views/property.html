@@ -1,1 +1,6 @@
-property.html
+<!--<div ng-model = "message">{{message}}</div>-->
+<h4>{{property.currentCategory}}</h4>
+<div ng-repeat='prop in property.propertyList'>
+    <label>{{prop.displayName}}</label>
+    <input type='text' ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'text'" ng-change="property.onChangeData()"/>
+</div>
