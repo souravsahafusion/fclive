@@ -23,6 +23,7 @@
                 {{prop.displayName}}
             </label>
             <input class="col-md-offset-3 col-md-9" type='checkbox' ng-model='property.baseTarget[prop.name]' ng-change="property.onChangeData()" ng-true-value="'1'" ng-false-value="'0'" ng-checked="property.baseTarget[prop.name]=='1'"/>
+            
             <div class="slider round"></div>
         </div>        
         <div ng-if="prop.type == 'select'">
@@ -30,6 +31,7 @@
             <select >
                   <option ng-repeat="item in prop.values" ng-model="item">{{item}}</option>                  
             </select>
+
         </div>
     </div>
 </form>
