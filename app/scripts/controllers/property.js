@@ -16,6 +16,8 @@
 
 		self.propertyList = [];
 		self.baseTarget = {};
+		self.delayOn = false;
+		self.updateAgain = false;
 
 		function getBaseTarget(base, target){
 			var i = 0,
@@ -52,7 +54,20 @@
 		});
 
 		self.onChangeData = function(){
-			$rootScope.$broadcast('propertyChanged');
+			if(self.delayOn){
+				self.delayOn = false;
+				setTimeout(function(){
+					if(self.updateAgain){
+						self.updateAgain = false;
+						self.onChangeData();
+					} else {
+						self.updateAgain = true;
+					}
+				}, 500);
+			} else {
+				$rootScope.$broadcast('propertyChanged');
+				self.delayOn = true;		
+			}	
 		};
 
 	});

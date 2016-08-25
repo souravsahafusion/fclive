@@ -64,7 +64,7 @@ angular
 		                  "type": "text",
 		                  "defaultValue": ""
 		              }, {
-		                  "name": "subcaption",
+		                  "name": "subCaption",
 		                  "displayName": "Subcaption",
 		                  "type": "text",
 		                  "defaultValue": ""
