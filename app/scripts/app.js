@@ -64,8 +64,8 @@ angular
 		                  "type": "text",
 		                  "defaultValue": ""
 		              }, {
-		                  "name": "subcaption",
-		                  "displayName": "Subcaption",
+		                  "name": "subCaption",
+		                  "displayName": "SubCaption",
 		                  "type": "text",
 		                  "defaultValue": ""
 		              }]
@@ -87,6 +87,43 @@ angular
 						"displayName": "Palette Colors",
 						"type": "color",
 						"defaultValue": "#0075c2"
+		          	},{
+		          		"name": "palette",
+						"displayName": "Palette",
+						"type": "number",
+						"defaultValue": "1",
+						"min":"1",
+						"max":"5"					
+		          	},{
+		          		"name": "showLabels",
+						"displayName": "Show Labels",
+						"type": "boolean",
+						"defaultValue": "1"					
+		          	},{
+		          		"name": "maxLabelHeight",
+						"displayName": "Max Label Height",
+						"type": "number"				
+		          	},{
+		          		"name": "useEllipsesWhenOverflow",
+						"displayName": "Use Ellipses When Overflow",
+						"type": "boolean",
+						"defaultValue": "0"					
+		          	},{
+		          		"name": "labelDisplay",
+						"displayName": "Label Display",
+						"type": "select",
+						"values":['AUTO', 'WRAP', 'STAGGER', 'ROTATE', 'NONE'],
+						"defaultValue": 'AUTO'				
+		          	},{
+		          		"name": "rotateLabels",
+						"displayName": "Rotate Labels",
+						"type": "boolean",						
+						"defaultValue": '1'				
+		          	},{
+		          		"name": "slantLabels",
+						"displayName": "Slant Labels",
+						"type": "boolean",						
+						"defaultValue": '1'				
 		          	}]
 		          },{
 		          	"category":"Tool-tip",
@@ -103,7 +140,7 @@ angular
 						"defaultValue": "#ffffff"
 		          	},{
 		          		"name": "tooltipBorderAlpha",
-						"displayName": "Tool-tip Border Transparency",
+						"displayName": "Tool-tip Border Alpha",
 						"type": "numberRange",
 						"min":"0",
 						"max":"100",
