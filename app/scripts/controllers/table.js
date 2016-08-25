@@ -17,9 +17,19 @@
             self.getData = function() {
                 return data;
             };
-            self.datajson = data;
+            self.content = JSON.stringify(data, undefined,4);
     		self.onChangeData = function(){
 				$rootScope.$broadcast('propertyChanged');
 			};
+			self.loadDiv = function(source,target){
+				var src = document.getElementById(source),
+				trgt = document.getElementById(target);
+				src.classList.remove("hiddenData");
+				src.className = "visibleData";
+				trgt.classList.remove("visibleData");
+				trgt.className = "hiddenData";
+			};
         });
 })();
+
+
