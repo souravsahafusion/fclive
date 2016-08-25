@@ -50,10 +50,7 @@
                  "captionFontSize": "34",
                  "subcaptionFontSize": "14"
              },
-             "data": [{
-                 "label": "Jan",
-                 "value": "420000"
-             }, {
+             "data": [ {
                  "label": "Feb",
                  "value": "810000"
              }, {
