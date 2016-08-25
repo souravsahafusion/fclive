@@ -22,14 +22,13 @@
             <label class = "col-md-3 control-label">
                 {{prop.displayName}}
             </label>
-            <input class="col-md-offset-3 col-md-9" type='checkbox' ng-model='property.baseTarget[prop.name]' ng-change="property.onChangeData()" ng-true-value="'1'" ng-false-value="'0'" ng-checked="property.baseTarget[prop.name]=='1'"/>
-            
+            <input class="col-md-offset-3 col-md-9" type='checkbox' ng-model='property.baseTarget[prop.name]' ng-change="property.onChangeData()" ng-true-value="'1'" ng-false-value="'0'" ng-checked="property.baseTarget[prop.name]=='1'"/>            
             <div class="slider round"></div>
         </div>        
         <div ng-if="prop.type == 'select'">
-            <label  class="col-md-3 control-label">{{prop.displayName}}</label>
-            <select >
-                  <option ng-repeat="item in prop.values" ng-model="item">{{item}}</option>                  
+            <label  class="col-md-3 control-label">{{prop.displayName}} {{property.baseTarget[prop.name]}}</label>
+            <select ng-model="property.baseTarget[prop.name]" ng-change="property.onChangeData()">
+                  <option ng-repeat="item in prop.values"  value="{{item}}">{{item}}</option>
             </select>
 
         </div>
