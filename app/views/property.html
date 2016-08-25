@@ -11,13 +11,13 @@
 
         <label ng-if="prop.type !== 'boolean'" class="col-md-3 control-label">{{prop.displayName}}</label>
         <div ng-if="prop.type !== 'boolean'" class="col-md-9">
-            <input type='text' class="form-control" ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'text'" ng-blur="property.onChangeData()"/>
+            <input type='text' class="form-control" ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'text'" ng-change="property.onChangeData()"/>
 
-            <input type='text' class="form-control" ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'number'" ng-blur="property.onChangeData()"/>
+            <input type='text' class="form-control" ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'number'" ng-change="property.onChangeData()"/>
 
             <input type='range' class="form-control" ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'numberRange'" ng-mouseup="property.onChangeData()"/>
 
-            <input type='color' class="form-control" ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'color'" ng-change="property.onChangeData()"/>
+            <input type='color' class="form-control" ng-model='property.baseTarget[prop.name]' ng-if="prop.type === 'color'" ng-mouseleave="property.onChangeData()"/>
         </div>
     </div>
 </form>
