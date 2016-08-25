@@ -113,7 +113,7 @@ angular
 		     "raw": {
 		         "type": "column2d",
 		         "renderAt": "chart-container",
-		         "width": "550",
+		         "width": "460",
 		         "height": "350",
 		         "dataFormat": "json",
 		         "dataSource": {
