@@ -1,0 +1,37 @@
+.chartContainer{}
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+input[type="text"]:focus {
+
+}
+textarea{
+	resize:none;
+}
+a{ cursor: pointer; }
+.tableCaption{
+	font-weight: bold;
+	color: #999292;
+	margin: 10px -10px 10px 10px;
+}
+.dataContainer{
+	border:1px solid rgba(0,0,0,0.3);
+	border-radius: 5px;
+	margin-left:0; 
+}
+.dataJson{
+	font-family: tahoma;
+}
+.visibleData{
+	display: block;
+}
+.hiddenData{
+	display: none;
+}
+#tabContent{
+	height: 180px;
+	overflow-y: auto;
+}
+.textAreaClass[readonly]{
+	background-color: #ffffff;
+}
