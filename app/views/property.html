@@ -1,36 +1,57 @@
 <!--<div ng-model = "message">{{message}}</div>-->
-<h4>{{property.currentCategory}}</h4>
-<form class="form-horizontal">
+
+<div class = "well" style="margin-left: -3% !important;"><h4><center>{{property.currentCategory}}</center></h4></div>
+
+<form class="form-horizontal alignment" id="tabProperty">
     <div class="form-group" ng-repeat='prop in property.propertyList' ng-init="property.baseTarget[prop.name]=property.baseTarget[prop.name]||prop.defaultValue">        
-        <div ng-if="prop.type === 'text'">
-            <label  class="col-md-3 control-label">{{prop.displayName}}</label>
-            <input type='text' class="form-control" ng-model='property.baseTarget[prop.name]'  ng-blur="property.onChangeData()"/>
-        </div>
-        <div ng-if="prop.type === 'number'">
-            <label  class="col-md-3 control-label">{{prop.displayName}}</label>
-            <input type='text' class="form-control" ng-model='property.baseTarget[prop.name]' ng-blur="property.onChangeData()"/>
-        </div>
-        <div ng-if="prop.type === 'numberRange'">
-            <label  class="col-md-3 control-label">{{prop.displayName}}</label>
-            <input type='range' class="form-control" ng-model='property.baseTarget[prop.name]'  ng-mouseup="property.onChangeData()"/>
-        </div>
-        <div ng-if="prop.type == 'color'">
-            <label  class="col-md-3 control-label">{{prop.displayName}}</label>
-            <input type='color' class="form-control" ng-model='property.baseTarget[prop.name]' ng-mouseleave="property.onChangeData()"/>
-        </div>
-        <div class="checkbox col-md-12 switch"  ng-if="prop.type == 'boolean'">
-            <label class = "col-md-3 control-label">
+        <span ng-if="prop.type === 'text'">
+            <label for = "{{prop.displayName}}" class="col-md-7 control-label">{{prop.displayName}}</label>
+            <span class = "col-md-12">
+               <input type='text' id = "{{prop.displayName}}" class="form-control" ng-model='property.baseTarget[prop.name]'  ng-blur="property.onChangeData()"/>
+            </span>
+            
+        </span>
+        <span ng-if="prop.type === 'number'">
+            <label for = "{{prop.displayName}}" class="col-md-7 control-label">{{prop.displayName}}</label>
+            <span class = "col-md-5">
+                <input type='text' id = "{{prop.displayName}}" class="form-control" ng-model='property.baseTarget[prop.name]' ng-blur="property.onChangeData()"/>
+            </span>
+            
+        </span>
+        <span ng-if="prop.type === 'numberRange'">
+            <label for = "{{prop.displayName}}" class="col-md-7 control-label">{{prop.displayName}}</label>
+            <span class = "col-md-5">
+               <input type='range' id = "{{prop.displayName}}" class="form-control" ng-model='property.baseTarget[prop.name]'  ng-mouseup="property.onChangeData()"/>
+            </span>
+            
+        </span>
+        <span ng-if="prop.type == 'color'">
+            <label for = "{{prop.displayName}}" class="col-md-7 control-label">{{prop.displayName}}</label>
+            <span class = "col-md-5">
+                <input type='color' id = "{{prop.displayName}}" class="form-control" ng-model='property.baseTarget[prop.name]' ng-mouseleave="property.onChangeData()"/>
+            </span>
+            
+        </span>
+        <span ng-if="prop.type == 'boolean'">
+            <label for = "{{prop.displayName}}" class = "col-md-7 control-label">
                 {{prop.displayName}}
             </label>
-            <input class="col-md-offset-3 col-md-9" type='checkbox' ng-model='property.baseTarget[prop.name]' ng-change="property.onChangeData()" ng-true-value="'1'" ng-false-value="'0'" ng-checked="property.baseTarget[prop.name]=='1'"/>            
-            <div class="slider round"></div>
-        </div>        
-        <div ng-if="prop.type == 'select'">
-            <label  class="col-md-3 control-label">{{prop.displayName}} {{property.baseTarget[prop.name]}}</label>
-            <select ng-model="property.baseTarget[prop.name]" ng-change="property.onChangeData()">
+            <div class = "col-md-5">
+               <input id = "{{prop.displayName}}" class="col-md-offset-3 col-md-9" type='checkbox' ng-model='property.baseTarget[prop.name]' ng-change="property.onChangeData()" ng-true-value="'1'" ng-false-value="'0'" ng-checked="property.baseTarget[prop.name]=='1'"/> 
+            </div>
+                       
+            <!-- <div class="slider round"></div> -->
+        </span>        
+        <span ng-if="prop.type == 'select'">
+            <label for = "{{prop.displayName}}" class="col-md-7 control-label">{{prop.displayName}} {{property.baseTarget[prop.name]}}</label>
+            <div class = "col-md-5">
+               <select class = "form-control" ng-model="property.baseTarget[prop.name]" ng-change="property.onChangeData()">
                   <option ng-repeat="item in prop.values"  value="{{item}}">{{item}}</option>
             </select>
+            </div>
+            
 
-        </div>
+        </span>
+        <hr class="col-md-11">
     </div>
 </form>
