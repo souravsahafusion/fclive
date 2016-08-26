@@ -1,21 +1,4 @@
-<!-- 
-<div class = "row">
-    <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>label</th>
-        <th>value</th>
-      </tr>
-    </thead>
-    <tbody ng-app = "fcLiveApp" ng-controller = "TableCtrl" ng-init = "data = getData()">
-      <tr ng-repeat = "ob in data">
-        <td><input type = "text" ng-model = "ob.label"></td>
-        <td><input type = "text" ng-model = "ob.value"></td>
-      </tr>
-    </tbody>
-  </table>
-</div> -->
-<div ng-app="fcLiveApp" ng-controller="TableCtrl" ng-init="data = table.getData()">
+<div ng-app="fcLiveApp" ng-controller="TableCtrl">
     <ul class="nav nav-tabs" id="navTab">
         <li class="active">
             <a data-toggle="tab" ng-click="table.loadDiv('dataTable','dataJson')">Data</a>
@@ -29,18 +12,18 @@
             <div class="dataContainer row">
                 <div class="column col-md-6 tableCaption">Category</div>
                 <div class="column col-md-6 tableCaption">Values</div>
-                <div class="column col-md-6" ng-repeat-start="ob in data">
+                <div class="column col-md-6" ng-repeat-start="ob in table.dataSet">
                     <div>
-                        <input type="text" class="column col-md-12 textInput" ng-model="ob.label" ng-blur="table.onChangeData()">
+                        <input type="text" class="column col-md-12 textInput" ng-model="ob.label" ng-change="table.onChangeData()">
                     </div>
                 </div>
                 <div class="column col-md-6" ng-repeat-end>
                     <div>
-                        <input type="text" class="column col-md-12 textInput" ng-model="ob.value" ng-blur="table.onChangeData()">
+                        <input type="text" class="column col-md-12 textInput" ng-model="ob.value" ng-change="table.onChangeData()">
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
         <div id="dataJson" class="tab-pane fade hiddenData">
             <textarea readonly class="form-control col-xs-13 textAreaClass" rows="8">{{table.content}}</textarea>
         </div>
