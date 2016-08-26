@@ -42,6 +42,15 @@
 				trgt.classList.remove("visibleData");
 				trgt.className = "hiddenData";
 			};
+			//add new data object
+			self.addRow=function(){	
+				self.dataSet.push({"label":"","value":""});
+			}
+			//del last data object
+			self.delRow=function(){
+				self.dataSet.pop();
+			}
+			//drag and drop function to add new values from csv
 			dragAndDrop("dragndrop", function (result) {
 				var i = 0,
 					j=0,
