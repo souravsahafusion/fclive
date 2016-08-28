@@ -1,7 +1,8 @@
 function dragAndDrop(id, fn) {
 	var dropzone = document.getElementById(id),
 		acceptedTypes = {
-			'text/csv': true
+			'text/csv': true,
+			'application/vnd.ms-excel': true
 		};
 
 	// Logs the file to the console
