@@ -63,7 +63,7 @@
 					} else {
 						self.updateAgain = true;
 					}
-				}, 500);
+				}, 200);
 			} else {
 				$rootScope.$broadcast('propertyChanged');
 				self.delayOn = true;		
