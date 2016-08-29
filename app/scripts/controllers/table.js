@@ -11,7 +11,9 @@
 (function () {
 	angular.module('fcLiveApp')
 		.controller('TableCtrl', function ($scope, $rootScope) {
-			var self = this;
+			var self = this,
+				i,
+				len;
 			//contains data from datasource
 			self.dataSet=$rootScope.data.raw.dataSource.data;
 			//function returns data
@@ -45,10 +47,21 @@
 			//add new data object
 			self.addRow=function(){
 				self.dataSet.push({"label":"","value":""});
+				$rootScope.$broadcast('dataChanged');
 			}
 			//del last data object
-			self.delRow=function(){
-				self.dataSet.pop();
+			self.delRow=function(label){
+				if(label){
+					for(i=0,len=self.dataSet.length; i<len; i++){
+						if(self.dataSet[i].label==label){
+							self.dataSet.splice(i,1);
+							break;
+						}
+					}
+				}else{
+					self.dataSet.pop();
+				}
+				$rootScope.$broadcast('dataChanged');				
 			}
 			//drag and drop function to add new values from csv
 			dragAndDrop("dragndrop", function (result) {
@@ -82,6 +95,7 @@
 				}
 
 				$scope.$apply(function(){self.onChangeData();});
+				$rootScope.$broadcast('dataChanged');
 			});
-		});
+		});		
 })();
