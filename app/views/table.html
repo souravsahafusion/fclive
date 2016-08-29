@@ -3,7 +3,7 @@
         <li class="active">
             <a data-toggle="tab" ng-click="table.loadDiv('dataTable','dataJson')">Data</a>
         </li>
-        <li>
+        <li ng-click="table.onChangeData()">
             <a data-toggle="tab" ng-click="table.loadDiv('dataJson','dataTable')">JSON</a>
         </li>
     </ul>
