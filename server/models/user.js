@@ -7,7 +7,6 @@ var UserSchema = new Schema({
     gender: {type: String},
     profile_pic: {type: String},
     address: String,
-    journeys: [{type: String, ref: 'Journey'}],
     created_at: {type: Date, default: Date.now()}
 });
 
