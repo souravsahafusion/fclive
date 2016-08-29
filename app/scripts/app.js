@@ -101,7 +101,14 @@ angular
                "name": "labelDisplay",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Label Display"
+               "displayName": "Label Display",
+               "values": [
+                  "AUTO",
+                  "WRAP",
+                  "STAGGER",
+                  "ROTATE",
+                  "NONE"
+               ]
             },
             {
                "name": "useEllipsesWhenOverflow",
@@ -217,7 +224,13 @@ angular
                "name": "theme",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Theme"
+               "displayName": "Theme",
+               "values": [
+                  "carbon",
+                  "fint",
+                  "ocean",
+                  "zune"
+               ]
             }
          ]
       },
@@ -229,7 +242,8 @@ angular
                "name": "baseChartMessageFont",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Base Chart Message Font"
+               "displayName": "Base Chart Message Font",
+               "values": []
             },
             {
                "name": "baseChartMessageFontSize",
@@ -247,13 +261,23 @@ angular
                "name": "baseChartMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Base Chart Message Image H Align"
+               "displayName": "Base Chart Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "baseChartMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Base Chart Message Image V Align"
+               "displayName": "Base Chart Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "baseChartMessageImageAlpha",
@@ -297,13 +321,23 @@ angular
                "name": "loadMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Load Message Image H Align"
+               "displayName": "Load Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "loadMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Load Message Image V Align"
+               "displayName": "Load Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "loadMessageImageAlpha",
@@ -347,13 +381,23 @@ angular
                "name": "typeNotSupportedMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Type Not Supported Message Image H Align"
+               "displayName": "Type Not Supported Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "typeNotSupportedMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Type Not Supported Message Image V Align"
+               "displayName": "Type Not Supported Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "typeNotSupportedMessageImageAlpha",
@@ -397,13 +441,23 @@ angular
                "name": "renderErrorMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Render Error Message Image H Align"
+               "displayName": "Render Error Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "renderErrorMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Render Error Message Image V Align"
+               "displayName": "Render Error Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "renderErrorMessageImageAlpha",
@@ -447,13 +501,23 @@ angular
                "name": "dataLoadStartMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Load Start Message Image H Align"
+               "displayName": "Data Load Start Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "dataLoadStartMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Load Start Message Image V Align"
+               "displayName": "Data Load Start Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "dataLoadStartMessageImageAlpha",
@@ -497,13 +561,23 @@ angular
                "name": "dataEmptyMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Empty Message Image H Align"
+               "displayName": "Data Empty Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "dataEmptyMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Empty Message Image V Align"
+               "displayName": "Data Empty Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "dataEmptyMessageImageAlpha",
@@ -547,13 +621,23 @@ angular
                "name": "dataLoadErrorMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Load Error Message Image H Align"
+               "displayName": "Data Load Error Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "dataLoadErrorMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Load Error Message Image V Align"
+               "displayName": "Data Load Error Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "dataLoadErrorMessageImageAlpha",
@@ -597,13 +681,23 @@ angular
                "name": "dataInvalidMessageImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Invalid Message Image H Align"
+               "displayName": "Data Invalid Message Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "dataInvalidMessageImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Data Invalid Message Image V Align"
+               "displayName": "Data Invalid Message Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "dataInvalidMessageImageAlpha",
@@ -659,7 +753,12 @@ angular
                "name": "captionAlignment",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Caption Alignment"
+               "displayName": "Caption Alignment",
+               "values": [
+                  "left",
+                  "center",
+                  "right"
+               ]
             },
             {
                "name": "captionOnTop",
@@ -1091,19 +1190,37 @@ angular
                "name": "bgImageDisplayMode",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Bg Image Display Mode"
+               "displayName": "Bg Image Display Mode",
+               "values": [
+                  "stretch",
+                  "tile",
+                  "fit",
+                  "fill",
+                  "center",
+                  "none"
+               ]
             },
             {
                "name": "bgImageVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Bg Image V Align"
+               "displayName": "Bg Image V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             },
             {
                "name": "bgImageHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Bg Image H Align"
+               "displayName": "Bg Image H Align",
+               "values": [
+                  "left",
+                  "middle",
+                  "right"
+               ]
             },
             {
                "name": "bgImageScale",
@@ -1218,7 +1335,14 @@ angular
                "name": "logoPosition",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Logo Position"
+               "displayName": "Logo Position",
+               "values": [
+                  "TL",
+                  "TR",
+                  "BL",
+                  "BR",
+                  "CC"
+               ]
             },
             {
                "name": "logoAlpha",
@@ -2367,13 +2491,23 @@ angular
                "name": "labelHAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Label H Align"
+               "displayName": "Label H Align",
+               "values": [
+                  "left",
+                  "center",
+                  "right"
+               ]
             },
             {
                "name": "labelVAlign",
                "type": "select",
                "defaultValue": "",
-               "displayName": "Label V Align"
+               "displayName": "Label V Align",
+               "values": [
+                  "top",
+                  "middle",
+                  "bottom"
+               ]
             }
          ]
       },
@@ -2596,7 +2730,7 @@ angular
    "raw": {
       "type": "column2d",
       "renderAt": "chart-container",
-      "width": "450",
+      "width": "460",
       "height": "350",
       "dataFormat": "json",
       "dataSource": {
@@ -2694,8 +2828,7 @@ angular
          }
       }
    }
-}
-;
+};
 		 // to be removed later
 		 testOb.data = $rootScope.data;
 
