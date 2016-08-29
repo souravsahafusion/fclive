@@ -43,6 +43,7 @@ app.use(passport.session());
 passport.serializeUser(passConfig.serialize);
 passport.deserializeUser(passConfig.deserialize);
 passport.use('facebook', passConfig.facebookStrategy);
+passport.use('google', passConfig.googleStrategy);
 
 app.use('/api/users', users);
 app.use('/', routes);
