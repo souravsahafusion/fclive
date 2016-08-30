@@ -23,6 +23,7 @@
 
             FusionCharts.ready(function() {
                 revenueChart = new FusionCharts(raw).render();
+                console.log(revenueChart);
             });
             //broadcast name propertyChanged
             $scope.$on('propertyChanged', function() {

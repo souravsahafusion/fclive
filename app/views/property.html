@@ -43,7 +43,7 @@
             <!-- <div class="slider round"></div> -->
         </span>        
         <span ng-if="prop.type == 'select'">
-            <label for = "{{prop.displayName}}" class="col-md-7 control-label">{{prop.displayName}} {{property.baseTarget[prop.name]}}</label>
+            <label for = "{{prop.displayName}}" class="col-md-7 control-label">{{prop.displayName}}</label>
             <div class = "col-md-5">
                <select class = "form-control" ng-model="property.baseTarget[prop.name]" ng-change="property.onChangeData()">
                   <option ng-repeat="item in prop.values"  value="{{item}}">{{item}}</option>

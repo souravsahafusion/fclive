@@ -39,3 +39,4 @@ function dragAndDrop(id, fn) {
 		readfiles(e.dataTransfer.files);
 	};
 };
+
